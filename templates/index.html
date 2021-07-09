@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<ul class="container">
+    {% for task in all_tasks %}
+    <li class="my-2">
+        <div class="card w-100 shadow-sm">
+            <div class="card-body d-flex flex-column md:flex-row md:justify-content-between">
+                <p>{{ task.name }} <span class="badge bg-primary">{{ task.state }}</span></p>
+                <div class="w-auto d-flex justify-content-center">
+                    <button class="btn btn-danger btn-sm mx-3 md:mx-1"><i class="bi bi-trash"></i></button>{# onclick="{% url 'task_delete' task.id %}" #}
+                    <button class="btn btn-warning btn-sm mx-3 md:mx-1"><i class="bi bi-pencil"></i></button>
+                    <button class="btn btn-success btn-sm mx-3 md:mx-1"><i class="bi bi-check-lg"></i></button>
+                </div>
+            </div>
+        </div>
+    </li>
+    {% endfor %}
+</ul>
+{% endblock %}

@@ -1,0 +1,20 @@
+<form method="POST" id="insert_task_form" class="mt-4 border border-1 border-danger rounded-2 p-3">
+    <div class="form-group mb-2">
+        <label for="task_name">Task Name</label>
+        <input type="text" class="form-control" name="task_name" id="task_name" placeholder="Task Name" required>
+    </div>
+    <div class="form-group mb-2">
+        <label for="task_description">Task Description</label>
+        <textarea class="form-control" name="task_description" id="task_description" placeholder="Task Description" required></textarea>
+    </div>
+    <div class="form-group">
+        <label for="task_status">Task Status</label>
+        <select class="form-control" name="task_status" id="task_status" required>
+            <option value="1">Incomplete</option>
+            <option value="2">Complete</option>
+        </select>
+    </div>
+    <div class="form-group d-grid mt-4">
+        <button type="submit" class="btn btn-danger">Submit</button>
+    </div>
+</form>
